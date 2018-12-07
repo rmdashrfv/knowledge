@@ -25,3 +25,14 @@ Now that you have a user for Postgres, you might want to set a password for your
 The above command drops you into the postgres prompt, it is now waiting for postgres commands, not bash/terminal commands.
 To set a password for the user account you just created, run the following command:  
 `postgres=# \password (the username you used above)`
+
+
+# Mac OSX
+
+To quickly install PostgreSQL on Mac, simply run: `brew install postgres`.  
+If you want a GUI to run SQL and interact with databases, Postico is a great option.  
+
+My recommended approach to installing PostgreSQL is to use the EnterpriseDB installer, which will run by clicking the following link:  
+`https://www.enterprisedb.com/thank-you-downloading-postgresql?anid=1256158`  
+  
+With the above installer, PostgreSQL will come installed with my favorite GUI for SQL queries, pgAdmin 4+
