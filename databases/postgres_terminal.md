@@ -35,7 +35,7 @@ In order to store information in a database, you need tables to specify differen
 CREATE TABLE users (
     Email varchar(255),
     Name varchar(255),
-    id serial primarykey);
+    id serial);
 ```
 
 Now that you have a table, you can store information ...  
@@ -55,5 +55,14 @@ To get all information from a single table
 To get a specific column from a table
 `SELECT email FROM users;`
 
+
+We can add tables to this database...  
+```
+CREATE TABLE articles (
+    Title varchar(255),
+    Content text,
+    id serial,
+    user_id integer);
+```
 
 
