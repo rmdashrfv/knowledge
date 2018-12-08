@@ -26,7 +26,8 @@ class User {
      this.name = name;
      this.status = 'active';
   }
-}```
+}
+```
 
 So how does a schema look for a database? We use Structured Query Language (SQL) to communicate with databases. Notice that when we create the table/schema below, we use a plural name for the table, instead of a singular name.
 
