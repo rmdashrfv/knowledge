@@ -35,7 +35,8 @@ CREATE TABLE users (
   Name varchar(255),
   Username varchar(255),
   Status varchar(255)
-);```
+);
+```
 
 
 ### Record
