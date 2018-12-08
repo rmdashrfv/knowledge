@@ -60,7 +60,8 @@ CREATE TABLE users (
   Email varchar(255),
   Bio varchar(255),
   id serial
-);```  
+);
+```
 
 Using `id serial` we are specifying an auto-incrementing column of this table. Every time a user record is created a row gets added to the database with a unique ID.  
 
