@@ -1,12 +1,11 @@
 # Using PostgreSQL in Bash
 
-To access your databases from the terminal, you need to enter the postgres
-prompt with the following command:  
+To access your databases from the terminal, you need to log into your shell as 'postgres' (the default user) with the following command: 
 
 `$ sudo -u postgres -i`  
 
-You are now in the postgres prompt. Use the following command to enter postgres:  
-`$ psql`  
+You are now using the shell as postgres. Please note that your location in the shell is likely not wherever you logged in from. You should now be in the directory of your PostgreSQL installation. Use the following command to enter the PostgreSQL prompt:  
+`$ psql`
 
 
 From here, you can now enter commands specifically for postgres. These commands only work here, not in terminal, or a programming langauge's REPL. In fact, consider this the REPL for PostgreSQL.  
