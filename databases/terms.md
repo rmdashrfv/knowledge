@@ -75,7 +75,3 @@ CREATE TABLE articles (
 );
 ```
 
-
-
-
-## Data Types in SQL
