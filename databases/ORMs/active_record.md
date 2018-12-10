@@ -2,6 +2,24 @@
 
 ActiveRecord is an Object Relational Mapping for Ruby applications that provides the developer with a familiar interface to SQL. Put another way, it allows the developer to write Ruby code that will communicate with the database in SQL on the developer's behalf.
 
+## Creating an ActiveRecord Model
+
+A "model" is simply a Ruby class object that inherits from ActiveRecord.  
+```
+class User < ActiveRecord::Base
+
+end
+```  
+That's all.  
+  
+Because this User model inherits from `ActiveRecord::Base`, it now has access to a vast array of useful functions for saving objects, retrieving data, and updating objects. You don't have to write any of this, it's built into ActiveRecord. You also don't have to write an `initialize` method. All of this is handled by ActiveRecord. Here are couple of useful functions that I now have thanks to this ORM:
+
+```
+User.new    # create a new instance of user, but doesn't save it
+User.all    # returns all saved instances of User
+User.find() # returns a user whose ID column matches the number passed in
+```  
+
 ## Order of Operations
 
 The most basic order of operations with ActiveRecord is as follows:  
