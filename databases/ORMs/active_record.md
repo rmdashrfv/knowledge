@@ -15,10 +15,10 @@ The most basic order of operations with ActiveRecord is as follows:
 ### 1) Create a migration file
 A migration file is a file that specifies a schema for a particular table in your database. There are several ways to create a migration file:  
 
-*Rails*: `rails generate model User name:string email:string age:integer`  
+**Rails**: `rails generate model User name:string email:string age:integer`  
 The above command is unique to Ruby on Rails. It will generate a migration file for a User model and automatically include the required code for the columns and data types specified above (located in the `change` function).  
 
-*Sinatra*: `bundle exec rake db:create_migration NAME=create_users`  
+**Sinatra**: `bundle exec rake db:create_migration NAME=create_users`  
 The above command is unique to Sinatra apps. It will generate a migration file for a User model, but it will not include the required code for columns and data types in the `change` function.
 
 
