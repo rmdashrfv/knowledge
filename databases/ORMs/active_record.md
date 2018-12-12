@@ -80,3 +80,23 @@ To modify the table, here is the order of opertations:
 2) edit a migration file while it is DOWN
 3) re-run the migration file to set it back to UP
 ```
+
+### 1) Rollback the latest migration
+First, we rollback the database to a state where the migration file we want to change is `DOWN`.  
+`bundle exec rake db:rollback`  
+It's very important to note that the table you want to change may not be the most recent table you migrated. So if you have 5 migrations that are up, and you want to change the third migration from the top, you will need to run the rollback command 3 times.
+
+### 2) Edit a migration file while it is DOWN
+After step 1 is complete, the migration file is now down. It is now okay to make changes. You can change column names, data types, and default values now. Be sure to save the file once you're done. Using the users table above as an example, I can now do this to my user migration file:  
+
+```
+create_table :users do |t|
+  t.string :name
+  t.string :email
+  t.integer :age
+  t.date :birthday     # adding a birthday column
+  t.boolean :activated # adding a column to detect activation status
+end
+```
+
+The last two columns (date and birthday) have been added to the Users table, and will now be accessible properties on instances of my User model!
