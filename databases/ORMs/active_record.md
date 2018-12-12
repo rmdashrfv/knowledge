@@ -71,7 +71,7 @@ Now that you've run `bundle exec rake db:migrate`, run the same command, but wit
 Now that you understand how to get set up, let's go about making changes.   
 Let's say your users table is incomplete. You want to update your users table to enable the storage of data for loyalty points. The table itself exists, so you can't simply overwrite the user migration file (and you don't want to).  
 
-This is where rolling back the database comes into play. If you were to run `bundle exec rake db:migrate:status` in the terminal, you would see that your users table is now up because you've migrated the database. Your database schema is like a snapshot of your database's structure at the time you ran your migration files. Once a file has been migrated, it's status is `up`. Therefore, running `bundle exec rake db:migrate` will have no effect, because it only works on migrations whose status is currently `down`.  
+This is where rolling back the database comes into play. If you were to run `bundle exec rake db:migrate:status` in the terminal, you would see that your users table is now up because you've migrated the database. Your database schema is like a snapshot of your database's structure at the time you ran your migration files. Once a file has been migrated, it's status is `up`. Therefore, running `bundle exec rake db:migrate` will have no effect, because it only works on migrations whose status is currently `down`.  In addition, simply writing new code into your migration file **will not work**, because in order for you to change the database with the `db:migrate` command, the migration would have to be down. Editing the file while it is up will not work.
 
 To modify the table, here is the order of opertations:
 
