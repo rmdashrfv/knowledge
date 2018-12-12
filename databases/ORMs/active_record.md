@@ -100,3 +100,7 @@ end
 ```
 
 The last two columns (date and birthday) have been added to the Users table, and will now be accessible properties on instances of my User model!
+
+### 3) Re-run the migration
+Now that you've edited your migration (while it was down) the only thing left to do is put it back up.  
+`bundle exec rake db:migrate`
