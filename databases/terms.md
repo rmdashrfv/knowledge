@@ -75,3 +75,6 @@ CREATE TABLE articles (
 );
 ```
 
+The important column here is the `user_id integer` column. This column is a space meant to hold the id number of the user who wrote this article. Remember that each user created will have a unique id, which is how the system tells who is who. Users may have the same name and nickname, and the bio is just information they add about themselves. But the `id` column on the users table is assigned by the system, and cannot be edited by the user himself. 
+
+What this means is that we can pass this unique id value around to identify the user and we can "attach" it to instances of other objects to be able to tell what that object belongs to.
